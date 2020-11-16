@@ -81,6 +81,14 @@ public class Preorder {
             //此处的root只是一个变量的复用
             root = stack.pop();
             list.add(root.getVal());
+
+            System.out.println("------");
+            System.out.println(list.toString());
+            stack.forEach(treeNode -> {
+                System.out.println(treeNode.getVal().toString());
+            });
+            System.out.println("========");
+
             if (root.getRight() != null) {
                 stack.push(root.getRight());
             }
