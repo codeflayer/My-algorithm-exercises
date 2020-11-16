@@ -35,6 +35,10 @@ public class TreeNode {
         return val;
     }
 
+    public TreeNode getParent() {
+        return parent;
+    }
+
     public void setVal(Integer val) {
         this.val = val;
     }
