@@ -50,23 +50,24 @@ public class IP {
         List<String> result = restoreIpAddresses(s);
         System.out.println(result);
     }
+
     public static List<String> restoreIpAddresses(String s) {
         if (s == null || s.length() <= 3) {
             return null;
         }
         List<String> list = new ArrayList<>();
-        for (int j = 1; j <s.length()-2; j++) {
-            String str1 = s.substring(0,j);
+        for (int j = 1; j < s.length() - 2; j++) {
+            String str1 = s.substring(0, j);
             String temp = "";
-            if (Integer.valueOf(str1) > 255){
+            if (Integer.valueOf(str1) > 255) {
                 continue;
             }
-            for (int i = j+1; i <s.length()-1; i++) {
-                String str2 = s.substring(j,i);
-                if (Integer.valueOf(str2) > 255){
+            for (int i = j + 1; i < s.length() - 1; i++) {
+                String str2 = s.substring(j, i);
+                if (Integer.valueOf(str2) > 255) {
                     continue;
                 }
-                for (int k = i+1; k < s.length(); k++) {
+                for (int k = i + 1; k < s.length(); k++) {
                     String str3 = s.substring(i, k);
                     if (Integer.valueOf(str3) > 255) {
                         continue;
@@ -78,11 +79,11 @@ public class IP {
                     temp = new StringBuffer().append(Integer.valueOf(str1)).append(".").
                             append(Integer.valueOf(str2)).append(".")
                             .append(Integer.valueOf(str3)).append(".").
-                            append(Integer.valueOf(str4))
+                                    append(Integer.valueOf(str4))
                             .toString();
-                     list.add(temp);
+                    list.add(temp);
                 }
-             }
+            }
         }
         return list;
     }

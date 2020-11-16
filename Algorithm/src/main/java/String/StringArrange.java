@@ -45,17 +45,17 @@ public class StringArrange {
         }
         int temp = 0;
         for (int i = 0; i < sa1.length; i++) {
-            if (sa1[i] == 0){
+            if (sa1[i] == 0) {
                 return true;
             }
             for (int j = temp; j < sa2.length; j++) {
-                if (sa1[i] == sa2[j]){
+                if (sa1[i] == sa2[j]) {
                     int temp2 = s1.length();
-                    while(temp2>0) {
+                    while (temp2 > 0) {
                         if (sa1[i++] != sa2[j++]) {
                             return false;
                         }
-                        temp2 --;
+                        temp2--;
                     }
                 }
             }

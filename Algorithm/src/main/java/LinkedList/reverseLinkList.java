@@ -5,6 +5,7 @@ public class reverseLinkList {
 
     /**
      * 反转链表
+     *
      * @param argu
      */
     public static void main(String[] argu) {
@@ -25,8 +26,8 @@ public class reverseLinkList {
         l4.next = l5;
 
 
-        ListNode node =  reverse(l1);
-        while(node != null){
+        ListNode node = reverse(l1);
+        while (node != null) {
             System.out.println(node.val);
             node = node.next;
         }
@@ -36,7 +37,7 @@ public class reverseLinkList {
     public static ListNode reverse(ListNode l1) {
         ListNode pre = null;
         ListNode cur = l1;
-        while (cur != null){
+        while (cur != null) {
             ListNode nextNode = cur.next;
             cur.next = pre;
             pre = cur;

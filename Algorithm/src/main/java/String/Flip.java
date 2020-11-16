@@ -65,7 +65,9 @@ public class Flip {
     }
 
     public static String reverseWords(String s) {
-        if (s==null || s == "" || s == " "){return s;}
+        if (s == null || s == "" || s == " ") {
+            return s;
+        }
         int idx = s.length();
         String result = "";
         for (int i = (s.length() - 1); i >= 0; i--) {
@@ -73,25 +75,25 @@ public class Flip {
             if (c == ' ') {
                 String str = s.substring(i, idx);
                 str = str.replace(" ", "");
-                if (str==" " || str==""){
-                   continue;
-                }else{
+                if (str == " " || str == "") {
+                    continue;
+                } else {
                     result = result + " " + str;
                 }
                 idx = i;
             }
-            if (result != "" && result.charAt(0) == ' '){
+            if (result != "" && result.charAt(0) == ' ') {
                 result = result.substring(1, result.length());
             }
             if (i == 0) {
-                String str = s.substring(0, idx );
+                String str = s.substring(0, idx);
                 str = str.replace(" ", "");
-                if (str!=""){
+                if (str != "") {
                     result = result + " " + str;
                 }
             }
         }
-        if (result != "" && result.charAt(0) == ' '){
+        if (result != "" && result.charAt(0) == ' ') {
             result = result.substring(1, result.length());
         }
         return result;

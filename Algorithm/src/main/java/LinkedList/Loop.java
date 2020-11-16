@@ -4,9 +4,9 @@ public class Loop {
 
     /**
      * ### 题目描述
-     *
+     * <p>
      * 给定一个链表，判断链表中是否有环。
-     *
+     * <p>
      * 为了表示给定链表中的环，我们使用整数 `pos` 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 `pos` 是 `-1`，则在该链表中没有环。
      *
      * @param argu
@@ -30,7 +30,6 @@ public class Loop {
         l4.next = l5;
         l5.next = l2;
 
-
         boolean status = loop(l1);
 
     }
@@ -41,7 +40,7 @@ public class Loop {
         while (next != null && nNext != null) {
             next = next.next;
             nNext = nNext.next.next;
-            if (next == nNext){
+            if (next == nNext) {
                 System.out.println("true");
                 return true;
             }
